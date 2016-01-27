@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package mastermind;
-
+import java.util.Arrays;
 /**
  *
  * @author sasukeuni
@@ -19,9 +19,12 @@ public class Metodo {
      */
     static int[] konparatu(char[] a, char[] b) {
 	
-	int[] respuesta={0,0,0};
-	int[] cuentaA={0,0,0,0,0,0};
-	int[] cuentaB={0,0,0,0,0,0};
+	int[] respuesta=new int[3] ;
+	Arrays.fill(respuesta, 0);
+	int[] cuentaA=new int[6];
+	Arrays.fill(cuentaA, 0);
+	int[] cuentaB=new int[6];
+	Arrays.fill(cuentaB, 0);
 	
 	int i;
 	
