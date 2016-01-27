@@ -5,7 +5,6 @@
  */
 package mastermind;
 
-
 /**
  *
  * @author sasukeuni
@@ -22,13 +21,23 @@ public class Metodo {
 
         return null;//ajustar salida
     }
-    
-    static char[] generatu(){
+
+    static char[] generatu() {
         int posi;
-        char[] resultado;
-        posi=(int)(Math.random()*10);
-        
-        return null;//ajustar salida
+        char[] resultado = new char[4];
+        char[] posibilidades = new char[5];
+        posi = (int) (Math.random() * 4);
+        posibilidades[0] = 'a';
+        posibilidades[1] = 'b';
+        posibilidades[2] = 'c';
+        posibilidades[3] = 'd';
+        posibilidades[4] = 'e';
+
+        for (int i = 0; i < 4; i++) {
+            resultado[i] = posibilidades[posi];
+        }
+
+        return resultado;
     }
 
 }

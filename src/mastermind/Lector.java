@@ -21,7 +21,15 @@ public class Lector {
     
     static char[] lectorChar(){
         Scanner dato = new Scanner(System.in);
-        char[] leido = dato.nextLine().toCharArray();
+        char[] leido=new char[4]; 
+        
+            String leidoString=dato.next().toLowerCase();
+            
+        for (int i = 0; i < 4; i++) {   
+            leidoString=leidoString.substring(i, (i+1)); 
+            leido[i]=leidoString.charAt(i);
+        }
+        
         return leido;
     }
     
