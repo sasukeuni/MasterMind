@@ -15,12 +15,89 @@ public class Metodo {
     /**
      *
      * @param a generado de forma automatica
-     * @param b recivido por el usuario
+     * @param b recibido por el usuario
      * @return devuelve los resultados en cada posicion
      */
     static int[] konparatu(char[] a, char[] b) {
-
-        return null;//ajustar salida
+	
+	int[] respuesta={0,0,0};
+	int[] cuentaA={0,0,0,0,0,0};
+	int[] cuentaB={0,0,0,0,0,0};
+	
+	int i;
+	
+	//contamos cuantos de cada carácter hay en cada array
+	
+	for(i=0;i<=3;i++)
+	{
+	    if (a[i]=='a') {
+		cuentaA[0]++;
+	    }
+	    if (a[i]=='b') {
+		cuentaA[1]++;
+	    }
+	    if (a[i]=='c') {
+		cuentaA[2]++;
+	    }
+	    if (a[i]=='d') {
+		cuentaA[3]++;
+	    }
+	    if (a[i]=='e') {
+		cuentaA[4]++;
+	    }
+	    if (a[i]=='f') {
+		cuentaA[5]++;
+	    }
+	}
+	
+	for(i=0;i<=3;i++)
+	{
+	    if (b[i]=='a') {
+		cuentaA[0]++;
+	    }
+	    if (b[i]=='b') {
+		cuentaA[1]++;
+	    }
+	    if (b[i]=='c') {
+		cuentaA[2]++;
+	    }
+	    if (b[i]=='d') {
+		cuentaA[3]++;
+	    }
+	    if (b[i]=='e') {
+		cuentaA[4]++;
+	    }
+	    if (b[i]=='f') {
+		cuentaA[5]++;
+	    }
+	}
+	
+	//Comprobamos las coincidencias y apuntamos
+	
+	for(i=0;i<=5;i++)
+	{
+	    if(cuentaA[i]>=cuentaB[i])
+		respuesta[1]=respuesta[1]+(cuentaA[i]-(cuentaA[i]-cuentaB[i]));
+	    if(cuentaA[i]<cuentaB[i])
+		respuesta[1]=respuesta[1]+cuentaA[i];
+	}
+	
+	//comprobamos las coincidencias de posición y contamos
+	
+	for(i=0;i<=3;i++)
+	{
+	    if(a[i]==b[i])
+	    {
+		respuesta[0]++;
+		respuesta[1]--;
+	    }
+	}
+	
+	//contamos aciertos y calculamos errores
+	
+	respuesta[2]=respuesta[0]+respuesta[1]-4;
+	
+        return respuesta;//ajustar salida
     }
     
     static char[] generatu(){
