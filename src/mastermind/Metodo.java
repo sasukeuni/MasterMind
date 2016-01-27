@@ -25,7 +25,7 @@ public class Metodo {
 	Arrays.fill(cuentaA, 0);
 	int[] cuentaB=new int[6];
 	Arrays.fill(cuentaB, 0);
-	
+
 	int i;
 	
 	//contamos cuantos de cada carácter hay en cada array
