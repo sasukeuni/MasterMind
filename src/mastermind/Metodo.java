@@ -55,22 +55,22 @@ public class Metodo {
 	for(i=0;i<=3;i++)
 	{
 	    if (b[i]=='a') {
-		cuentaA[0]++;
+		cuentaB[0]++;
 	    }
 	    if (b[i]=='b') {
-		cuentaA[1]++;
+		cuentaB[1]++;
 	    }
 	    if (b[i]=='c') {
-		cuentaA[2]++;
+		cuentaB[2]++;
 	    }
 	    if (b[i]=='d') {
-		cuentaA[3]++;
+		cuentaB[3]++;
 	    }
 	    if (b[i]=='e') {
-		cuentaA[4]++;
+		cuentaB[4]++;
 	    }
 	    if (b[i]=='f') {
-		cuentaA[5]++;
+		cuentaB[5]++;
 	    }
 	}
 	
@@ -97,7 +97,10 @@ public class Metodo {
 	
 	//contamos aciertos y calculamos errores
 	
-	respuesta[2]=respuesta[0]+respuesta[1]-4;
+	respuesta[2]=-(respuesta[0]+respuesta[1]-4);
+	
+	//TODO eliminar esto
+	System.out.println(a);
 	
         return respuesta;//ajustar salida
     }
@@ -115,6 +118,7 @@ public class Metodo {
 
         for (int i = 0; i < 4; i++) {
             resultado[i] = posibilidades[posi];
+	    posi = (int) (Math.random() * 4);
         }
 
         return resultado;
