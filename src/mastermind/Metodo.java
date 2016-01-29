@@ -105,16 +105,18 @@ public class Metodo {
     static char[] generatu() {
         int posi;
         char[] resultado = new char[4];
-        char[] posibilidades = new char[5];
-        posi = (int) (Math.random() * 4);
+        char[] posibilidades = new char[6];
+        posi = (int) (Math.random() * 5);
         posibilidades[0] = 'a';
         posibilidades[1] = 'b';
         posibilidades[2] = 'c';
         posibilidades[3] = 'd';
         posibilidades[4] = 'e';
+        posibilidades[5] = 'f';
 
         for (int i = 0; i < 4; i++) {
             resultado[i] = posibilidades[posi];
+            posi = (int) (Math.random() * 5);
         }
 
         return resultado;
