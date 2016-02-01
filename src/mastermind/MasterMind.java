@@ -5,6 +5,8 @@
  */
 package mastermind;
 
+import java.util.Locale;
+
 /**
  *
  * @author sasukeuni
@@ -20,8 +22,8 @@ public class MasterMind {
 	char[] generado = Metodo.generatu();
 	String salidaString;
 	int intentos = 0;
-	int exit = 0;
-	int i = 0, j = 0;
+	int exit;
+	int i, j;
 	char[][] matrizRecepcion = new char[7][4];
 	int[][] matrizResultado = new int[7][3];
 
@@ -53,7 +55,7 @@ public class MasterMind {
 
 	    do {
 		System.out.print("Dame 4 caracteres: ");
-		recepcion = Lector.lectorChar(Lector.lector().toLowerCase());
+		recepcion = Lector.lectorChar(Lector.lector().toLowerCase(Locale.ENGLISH));
 		resultado = Metodo.konparatu(generado, recepcion);
 
 		System.out.println("Correctos: " + resultado[0]);

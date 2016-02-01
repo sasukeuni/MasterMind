@@ -20,7 +20,6 @@ public class Lector {
     }
     
     static char[] lectorChar(String leidoString){
-        Scanner dato = new Scanner(System.in);
         char[] leido=new char[4]; 
                     
         for (int i = 0; i < leidoString.length(); i++) {   
